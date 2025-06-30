@@ -53,3 +53,26 @@ The PCM Web App is designed to:
 ├── package.json
 ├── .gitignore
 ├── README.md
+
+👥 Roles
+Admin: Create events, manage members, upload documents, view full dashboard.
+
+Secretary: Record minutes, update attendance, manage member data.
+
+Members: View events, RSVP, access resources.
+
+🛠️ Contribution
+Fork the repository.
+
+Create a feature branch: git checkout -b feature-name.
+
+Commit your changes: git commit -m "Add feature XYZ".
+
+Push to your fork: git push origin feature-name.
+
+Create a Pull Request.
+
+📞 Contact
+Maintained by: Cavendish University Public Campus Ministry
+Secretary: [Samson Kwizela]
+Contact: [Kwizelasamson@gmail.com]
