@@ -1,4 +1,4 @@
-# PCM Web Application
+# Cavendish PCM Web Application
 
 **Public Campus Ministry (PCM) Web Application**  
 A fully functional web platform to support Cavendish University Campus Ministry activities, including membership management, event scheduling, attendance tracking, and document sharing.
