@@ -39,6 +39,7 @@ The PCM Web App is designed to:
 ---
 
 ## 📁 Project Structure
+
 /cavendish-pcm-web-app
 ├── /src
 │ ├── /components # Reusable UI components
