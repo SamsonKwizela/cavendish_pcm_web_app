@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Container, Typography, Box, Grid, Paper, Button } from "@mui/material";
+import { Container, Typography, Box, Grid, Paper } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import SchoolIcon from "@mui/icons-material/School";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
@@ -14,9 +13,6 @@ const Home = () => {
         <Typography variant="h6" color="text.secondary" gutterBottom>
           Empowering students with knowledge, skills, and support.
         </Typography>
-        <Button variant="contained" size="large" sx={{ mt: 3 }}>
-          Get Started
-        </Button>
       </Container>
 
       <Container maxWidth="lg">
