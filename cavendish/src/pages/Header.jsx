@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,139 +13,125 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import pcmLogo from "../assets/pcm.jpeg";
 
-const pages = ["Home", "About", "Contack Us"];
+// Map pages to their respective paths
+const pages = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Contact Us", path: "/contact" },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
+  const handleOpenUserMenu = (event) => setAnchorElUser(event.currentTarget);
+  const handleCloseNavMenu = () => setAnchorElNav(null);
+  const handleCloseUserMenu = () => setAnchorElUser(null);
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  const isActive = (path) => location.pathname === path;
 
   return (
     <AppBar
       position="static"
       sx={{
-        backgroundColor: "white", // Set background to white
-        color: "black", // Set text color to black
-        boxShadow: "none", // Optional: removes elevation shadow
-        borderBottom: "1px solid #e0e0e0", // Optional: light gray border for separation
+        backgroundColor: "white",
+        color: "black",
+        boxShadow: "none",
+        borderBottom: "1px solid #e0e0e0",
       }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <img src={pcmLogo} alt="logo" width="60px" height="60px" />
           <Typography variant="h6" noWrap component="a">
             Cavendish PCM
           </Typography>
 
+          {/* Mobile menu */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
             >
               <MenuIcon />
             </IconButton>
             <Menu
-              id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
+              sx={{
+                display: { xs: "block", md: "none", textDecoration: "none" },
+              }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center", color: "black" }}>
-                    {page}
+                <MenuItem
+                  key={page.name}
+                  onClick={() => {
+                    navigate(page.path);
+                    handleCloseNavMenu();
+                  }}
+                  selected={isActive(page.path)}
+                >
+                  <Typography
+                    sx={{
+                      textAlign: "center",
+                      color: isActive(page.path) ? "blue" : "black",
+                      fontWeight: isActive(page.path) ? "bold" : "normal",
+                    }}
+                  >
+                    {page.name}
                   </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
+
+          {/* Desktop menu */}
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex", justifyContent: "end" },
+              display: {
+                xs: "none",
+                md: "flex",
+                justifyContent: "end",
+                textDecoration: "none",
+              },
             }}
           >
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, display: "block", color: "black" }}
+                key={page.name}
+                onClick={() => navigate(page.path)}
+                sx={{
+                  my: 2,
+                  display: "block",
+                  color: isActive(page.path) ? "blue" : "black",
+                  fontWeight: isActive(page.path) ? "bold" : "normal",
+                  borderBottom: isActive(page.path) ? "2px solid blue" : "none",
+                  borderRadius: 0,
+                }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
+
+          {/* User Menu */}
           <Box sx={{ flexGrow: 0 }}>
             <Menu
               sx={{ mt: "45px" }}
-              id="menu-appbar"
               anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>
-                    {setting}
-                  </Typography>
+                  <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -154,4 +141,5 @@ function Header() {
     </AppBar>
   );
 }
+
 export default Header;
