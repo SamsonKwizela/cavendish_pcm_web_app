@@ -5,6 +5,7 @@ import ContactUs from "./pages/ContactUs";
 import { Route, Routes } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
