@@ -4,7 +4,6 @@ import { useDisclosure } from "@mantine/hooks";
 import classes from "../Style.module.css";
 import pcmLogo from "../assets/pcm.jpeg";
 import { Box } from "@mui/material";
-// import Home from "../pages/Home";
 import { HomelandingPage } from "./HomelandingPage";
 import { UpcomingEvent } from "../pages/UpcomingEvent";
 
@@ -40,7 +39,7 @@ export function NavigationBar() {
         <Container size="md" className={classes.inner}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Image src={pcmLogo} alt="logo" className={classes.logo} />
-            <Text size="sm" weight="bold" sx={{ marginLeft: "10px" }}>
+            <Text size="xl" weight="bold" sx={{ marginLeft: "10px" }}>
               Cavendish PCM
             </Text>
           </Box>
