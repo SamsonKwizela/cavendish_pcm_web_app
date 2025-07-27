@@ -67,7 +67,14 @@ export function UpcomingEvent() {
 
   return (
     <Container py="xl">
-      <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={{ base: 0, sm: "md" }}>
+      <Text align="center" size="xl" fw="bold" mt="lg">
+        Upcoming Events
+      </Text>
+      <SimpleGrid
+        cols={{ base: 1, sm: 3 }}
+        spacing={{ base: 0, sm: "md" }}
+        mt="lg"
+      >
         {cards}
       </SimpleGrid>
     </Container>
