@@ -9,10 +9,7 @@ import classes from "../Style.module.css";
 
 const links = [
   { link: "#", label: "Contact" },
-  { link: "#", label: "Privacy" },
-  { link: "#", label: "Blog" },
-  { link: "#", label: "Store" },
-  { link: "#", label: "Careers" },
+  { link: "#", label: "Ministries" },
 ];
 
 export function Footer() {
