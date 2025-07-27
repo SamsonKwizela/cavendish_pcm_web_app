@@ -1,16 +1,13 @@
 import "./App.css";
-import { createTheme, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { NavigationBar } from "./component/NavigationBar";
 import { Footer } from "./pages/Footer";
-
-const theme = createTheme({
-  /** Put your mantine theme override here */
-});
+import { theme } from "./Colors";
 
 function App() {
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={theme} defaultColorScheme="light">
       <NavigationBar />
       <Footer />
       {/* <Header />

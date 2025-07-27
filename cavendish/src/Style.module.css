@@ -1,5 +1,5 @@
 .header {
-  height: 56px;
+  height: 66px;
   margin-bottom: 120px;
   background-color: var(--mantine-color-body);
   border-bottom: 1px solid
@@ -47,7 +47,7 @@
   background-image: url("./assets/pcm-student.jpg");
   background-size: cover;
   background-position: center;
-  margin-top: -120px;
+  margin-top: -125px;
 }
 
 .containerLanding {

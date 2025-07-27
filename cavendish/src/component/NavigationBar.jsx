@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Burger, Container, Group, Image, Text } from "@mantine/core";
+import {
+  Burger,
+  Container,
+  Group,
+  Image,
+  Text,
+  useMantineTheme,
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "../Style.module.css";
 import pcmLogo from "../assets/pcm.jpeg";
@@ -15,6 +22,7 @@ const links = [
 ];
 
 export function NavigationBar() {
+  const theme = useMantineTheme();
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
 
@@ -35,7 +43,10 @@ export function NavigationBar() {
 
   return (
     <>
-      <header className={classes.header}>
+      <header
+        className={classes.header}
+        style={{ backgroundColor: theme.colors.pcmBlue[9] }}
+      >
         <Container size="md" className={classes.inner}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Image src={pcmLogo} alt="logo" className={classes.logo} />
