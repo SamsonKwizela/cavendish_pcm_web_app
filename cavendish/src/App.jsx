@@ -1,11 +1,4 @@
 import "./App.css";
-import Header from "./pages/Header";
-import Home from "./pages/Home";
-import ContactUs from "./pages/ContactUs";
-import { Route, Routes } from "react-router-dom";
-import AboutUs from "./pages/AboutUs";
-import NotFound from "./pages/NotFound";
-import Footer from "./pages/Footer";
 import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { NavigationBar } from "./component/NavigationBar";

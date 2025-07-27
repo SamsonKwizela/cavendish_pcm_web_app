@@ -4,8 +4,9 @@ import { useDisclosure } from "@mantine/hooks";
 import classes from "../Style.module.css";
 import pcmLogo from "../assets/pcm.jpeg";
 import { Box } from "@mui/material";
-import Home from "../pages/Home";
+// import Home from "../pages/Home";
 import { HomelandingPage } from "./HomelandingPage";
+import { UpcomingEvent } from "../pages/UpcomingEvent";
 
 const links = [
   { link: "/home", label: "Home" },
@@ -49,6 +50,7 @@ export function NavigationBar() {
         </Container>
       </header>
       <HomelandingPage />
+      <UpcomingEvent />
     </>
   );
 }
