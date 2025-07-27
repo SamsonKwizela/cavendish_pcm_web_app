@@ -4,7 +4,6 @@ import {
   IconBrandYoutube,
 } from "@tabler/icons-react";
 import { ActionIcon, Anchor, Group, Image } from "@mantine/core";
-// import { MantineLogo } from "@mantinex/mantine-logo";
 import pcmLogo from "../assets/pcm.jpeg";
 import classes from "../Style.module.css";
 
@@ -33,7 +32,6 @@ export function Footer() {
   return (
     <div className={classes.footer}>
       <div className={classes.innerFooter}>
-        {/* <MantineLogo size={28} /> */}
         <Image src={pcmLogo} alt="logo" className={classes.logo} />
 
         <Group className={classes.linksFooter}>{items}</Group>

@@ -12,6 +12,7 @@ const links = [
   { link: "/home", label: "Home" },
   { link: "/about", label: "About" },
   { link: "/ministries", label: "Ministries" },
+  { link: "/contact", label: "Contact Us" },
 ];
 
 export function NavigationBar() {
