@@ -9,7 +9,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "../Style.module.css";
-import pcmLogo from "../assets/pcm.jpeg";
+import pcmLogo from "../assets/pcm.png";
 import { Box } from "@mui/material";
 import { HomelandingPage } from "./HomelandingPage";
 import { UpcomingEvent } from "../pages/UpcomingEvent";

@@ -4,7 +4,7 @@ import {
   IconBrandYoutube,
 } from "@tabler/icons-react";
 import { ActionIcon, Anchor, Group, Image } from "@mantine/core";
-import pcmLogo from "../assets/pcm.jpeg";
+import pcmLogo from "../assets/pcm.png";
 import classes from "../Style.module.css";
 
 const links = [
