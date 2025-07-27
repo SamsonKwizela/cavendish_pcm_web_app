@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Burger, Container, Group, Image, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-// import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "../Style.module.css";
 import pcmLogo from "../assets/pcm.jpeg";
 import { Box } from "@mui/material";
+import Home from "../pages/Home";
+import { HomelandingPage } from "./HomelandingPage";
 
 const links = [
   { link: "/home", label: "Home" },
@@ -32,19 +33,22 @@ export function NavigationBar() {
   ));
 
   return (
-    <header className={classes.header}>
-      <Container size="md" className={classes.inner}>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Image src={pcmLogo} alt="logo" className={classes.logo} />
-          <Text size="sm" weight="bold" sx={{ marginLeft: "10px" }}>
-            Cavendish PCM
-          </Text>
-        </Box>
-        <Group gap={5} visibleFrom="xs">
-          {items}
-        </Group>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-      </Container>
-    </header>
+    <>
+      <header className={classes.header}>
+        <Container size="md" className={classes.inner}>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Image src={pcmLogo} alt="logo" className={classes.logo} />
+            <Text size="sm" weight="bold" sx={{ marginLeft: "10px" }}>
+              Cavendish PCM
+            </Text>
+          </Box>
+          <Group gap={5} visibleFrom="xs">
+            {items}
+          </Group>
+          <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        </Container>
+      </header>
+      <HomelandingPage />
+    </>
   );
 }
