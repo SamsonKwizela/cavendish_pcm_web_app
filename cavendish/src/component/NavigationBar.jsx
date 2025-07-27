@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { Burger, Container, Group, Image } from "@mantine/core";
+import { Burger, Container, Group, Image, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 // import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "../Style.module.css";
 import pcmLogo from "../assets/pcm.jpeg";
+import { Box } from "@mui/material";
 
 const links = [
   { link: "/home", label: "Home" },
-  { link: "/pricing", label: "Pricing" },
-  { link: "/learn", label: "Learn" },
-  { link: "/community", label: "Community" },
+  { link: "/about", label: "About" },
+  { link: "/ministries", label: "Ministries" },
 ];
 
 export function NavigationBar() {
@@ -34,11 +34,15 @@ export function NavigationBar() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <Image src={pcmLogo} alt="logo" className={classes.logo} />
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Image src={pcmLogo} alt="logo" className={classes.logo} />
+          <Text size="sm" weight="bold" sx={{ marginLeft: "10px" }}>
+            Cavendish PCM
+          </Text>
+        </Box>
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
-
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>
