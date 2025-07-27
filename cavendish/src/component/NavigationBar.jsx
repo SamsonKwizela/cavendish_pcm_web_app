@@ -50,7 +50,7 @@ export function NavigationBar() {
         <Container size="md" className={classes.inner}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Image src={pcmLogo} alt="logo" className={classes.logo} />
-            <Text size="xl" weight="bold" sx={{ marginLeft: "10px" }}>
+            <Text size="xl" weight="bold" sx={{ marginLeft: "10px" }} c="white">
               Cavendish PCM
             </Text>
           </Box>

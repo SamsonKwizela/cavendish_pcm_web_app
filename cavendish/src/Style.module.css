@@ -24,7 +24,7 @@
   padding: 8px 12px;
   border-radius: var(--mantine-radius-sm);
   text-decoration: none;
-  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  color: rgb(252, 243, 243);
   font-size: var(--mantine-font-size-sm);
   font-weight: 500;
 
