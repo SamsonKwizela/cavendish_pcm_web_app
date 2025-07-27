@@ -6,7 +6,7 @@ import classes from "../Style.module.css";
 import pcmLogo from "../assets/pcm.jpeg";
 
 const links = [
-  { link: "/about", label: "Features" },
+  { link: "/home", label: "Home" },
   { link: "/pricing", label: "Pricing" },
   { link: "/learn", label: "Learn" },
   { link: "/community", label: "Community" },
