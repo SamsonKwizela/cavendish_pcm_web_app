@@ -45,7 +45,7 @@ export function NavigationBar() {
     <>
       <header
         className={classes.header}
-        style={{ backgroundColor: theme.colors.pcmBlue[9] }}
+        style={{ backgroundColor: theme.colors.pcmBlue[5] }}
       >
         <Container size="md" className={classes.inner}>
           <Box sx={{ display: "flex", alignItems: "center" }}>

@@ -22,10 +22,11 @@ export function HomelandingPage() {
         <Button
           variant="gradient"
           size="xl"
-          radius="xl"
+          radius="md"
           className={classes.controlLanding}
+          bg="pcmBlue.5"
         >
-          Satudays at cavendish
+          Satuday's at cavendish
         </Button>
       </Container>
     </div>
