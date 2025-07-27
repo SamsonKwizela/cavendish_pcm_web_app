@@ -95,6 +95,7 @@
 
 .controlLanding {
   margin-top: calc(var(--mantine-spacing-xl) * 1.5);
+  background-color: blue;
 
   @media (max-width: $mantine-breakpoint-sm) {
     width: 100%;

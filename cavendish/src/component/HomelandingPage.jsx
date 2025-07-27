@@ -11,12 +11,12 @@ export function HomelandingPage() {
       />
       <Container className={classes.containerLanding} size="md">
         <Title className={classes.titleLanding}>
-          A fully featured React components library
+          Growing in Faith and Knowledge – PCM Students for Christ
         </Title>
         <Text className={classes.descriptionLanding} size="xl" mt="xl">
-          Build fully functional accessible web applications faster than ever –
-          Mantine includes more than 120 customizable components and hooks to
-          cover you in any situation
+          Join us as we honor God through academic excellence and active
+          participation in His kingdom. Let’s shine in our studies, grow in
+          faith, and impact the world — together.
         </Text>
 
         <Button
@@ -25,7 +25,7 @@ export function HomelandingPage() {
           radius="xl"
           className={classes.controlLanding}
         >
-          Get started
+          Satudays at cavendish
         </Button>
       </Container>
     </div>
