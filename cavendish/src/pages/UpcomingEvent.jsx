@@ -66,8 +66,8 @@ export function UpcomingEvent() {
   ));
 
   return (
-    <Container py="xl">
-      <Text align="center" size="xl" fw="bold" mt="lg">
+    <Container py="xl" size="lg">
+      <Text align="center" size="2.5rem" fw="bold" mt="lg">
         Upcoming Events
       </Text>
       <SimpleGrid
