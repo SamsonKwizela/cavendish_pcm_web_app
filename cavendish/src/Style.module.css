@@ -196,10 +196,10 @@
 
 .imageVisitUs {
   width: 376px;
-  height: 356px;
+  height: 386px;
 
   @media (max-width: $mantine-breakpoint-md) {
-    display: none;
+    /* display: none; */
   }
 }
 

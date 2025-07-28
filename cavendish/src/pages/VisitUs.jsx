@@ -9,7 +9,7 @@ import {
   ThemeIcon,
   Title,
 } from "@mantine/core";
-// import image from "./image.svg";
+import sda from "../assets/sda.png";
 import classes from "../Style.module.css";
 
 export function VisitUs() {
@@ -39,7 +39,7 @@ export function VisitUs() {
             </Button>
           </Group>
         </div>
-        {/* <Image src={image.src} className={classes.imageVisitUs} /> */}
+        <Image src={sda} alt="sda" className={classes.imageVisitUs} />
       </div>
     </Container>
   );
