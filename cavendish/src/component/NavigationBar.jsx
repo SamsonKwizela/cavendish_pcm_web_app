@@ -13,6 +13,7 @@ import pcmLogo from "../assets/pcm.png";
 import { Box } from "@mui/material";
 import { HomelandingPage } from "./HomelandingPage";
 import { UpcomingEvent } from "../pages/UpcomingEvent";
+import { VisitUs } from "../pages/VisitUs";
 
 const links = [
   { link: "/home", label: "Home" },
@@ -61,6 +62,7 @@ export function NavigationBar() {
         </Container>
       </header>
       <HomelandingPage />
+      <VisitUs />
       <UpcomingEvent />
     </>
   );
