@@ -26,7 +26,7 @@ export function HomelandingPage() {
           className={classes.controlLanding}
           bg="pcmBlue.5"
         >
-          Satuday's at cavendish
+          Saturday's at cavendish
         </Button>
       </Container>
     </div>
