@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   height: 66px;
   margin-bottom: 120px;
   background-color: var(--mantine-color-body);
@@ -47,7 +52,7 @@
   background-image: url("./assets/pcm-student.jpg");
   background-size: cover;
   background-position: center;
-  margin-top: -125px;
+  margin-top: 60px;
 }
 
 .containerLanding {
