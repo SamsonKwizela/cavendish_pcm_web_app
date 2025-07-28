@@ -169,6 +169,7 @@
   justify-content: space-between;
   padding-top: calc(var(--mantine-spacing-xl) * 4);
   padding-bottom: calc(var(--mantine-spacing-xl) * 4);
+  z-index: 3;
 }
 
 .contentVisitUs {
@@ -213,4 +214,33 @@
   background-color: var(--mantine-color-blue-light);
   border-radius: var(--mantine-radius-sm);
   padding: 4px 12px;
+}
+
+.waveTop,
+.waveBottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.waveTop {
+  top: 0;
+  transform: translateY(-1px);
+}
+
+.waveBottom {
+  bottom: 0;
+  transform: translateY(1px);
+}
+
+.waveSection {
+  position: relative;
+  background-color: #edf2ff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  z-index: 2;
 }
