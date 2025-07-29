@@ -1,17 +1,16 @@
 import "./App.css";
-import Header from "./pages/Header";
-import Home from "./pages/Home";
-import ContactUs from "./pages/ContactUs";
-import { Route, Routes } from "react-router-dom";
-import AboutUs from "./pages/AboutUs";
-import NotFound from "./pages/NotFound";
-import Footer from "./pages/Footer";
-import Departments from "./pages/Departments";
+import { MantineProvider } from "@mantine/core";
+import "@mantine/core/styles.css";
+import { NavigationBar } from "./component/NavigationBar";
+import { Footer } from "./pages/Footer";
+import { theme } from "./Colors";
 
 function App() {
   return (
-    <div>
-      <Header />
+    <MantineProvider theme={theme} defaultColorScheme="light">
+      <NavigationBar />
+      <Footer />
+      {/* <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
@@ -19,8 +18,8 @@ function App() {
         <Route path="/Departments" element={<Departments />}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
-    </div>
+      <Footer /> */}
+    </MantineProvider>
   );
 }
 

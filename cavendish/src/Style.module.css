@@ -1,0 +1,246 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 66px;
+  margin-bottom: 120px;
+  background-color: var(--mantine-color-body);
+  border-bottom: 1px solid
+    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+}
+
+.inner {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.link {
+  display: block;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: rgb(252, 243, 243);
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 500;
+
+  @mixin hover {
+    background-color: light-dark(
+      var(--mantine-color-gray-0),
+      var(--mantine-color-dark-6)
+    );
+  }
+
+  [data-mantine-color-scheme] &[data-active] {
+    background-color: var(--mantine-color-blue-filled);
+    color: var(--mantine-color-white);
+  }
+}
+
+/* landing page */
+.heroLanding {
+  position: relative;
+  background-image: url("./assets/pcm-student.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+}
+
+.containerLanding {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: calc(var(--mantine-spacing-xl) * 6);
+  z-index: 1;
+  position: relative;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    height: 500px;
+    padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+  }
+}
+
+.titleLanding {
+  color: var(--mantine-color-white);
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1.1;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+}
+
+.descriptionLanding {
+  color: var(--mantine-color-white);
+  max-width: 600px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    max-width: 100%;
+    font-size: var(--mantine-font-size-sm);
+  }
+}
+
+.controlLanding {
+  margin-top: calc(var(--mantine-spacing-xl) * 1.5);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: 100%;
+  }
+}
+
+/* upcoming event */
+.cardEvent {
+  border: 1px solid transparent;
+  position: relative;
+  transition: border-color 150ms ease, transform 150ms ease,
+    box-shadow 150ms ease;
+
+  @mixin hover {
+    z-index: 1;
+    transform: scale(1.01);
+    box-shadow: var(--mantine-shadow-md);
+    border-color: light-dark(
+      var(--mantine-color-gray-2),
+      var(--mantine-color-dark-5)
+    );
+  }
+}
+
+.dateEvent {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--mantine-color-dimmed);
+  font-size: var(--mantine-font-size-xs);
+  margin-top: var(--mantine-spacing-xs);
+}
+
+.titleEvent {
+  font-family: "Outfit", var(--mantine-font-family);
+  font-weight: 500;
+  font-size: var(--mantine-font-size-lg);
+}
+
+/* footer */
+.footer {
+  margin-top: 120px;
+  border-top: 1px solid
+    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+
+.innerFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--mantine-spacing-md) var(--mantine-spacing-md);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+  }
+}
+
+.linksFooter {
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-top: var(--mantine-spacing-lg);
+    margin-bottom: var(--mantine-spacing-sm);
+  }
+}
+
+/* Visit us */
+.innerVisitUs {
+  display: flex;
+  justify-content: space-between;
+  padding-top: calc(var(--mantine-spacing-xl) * 4);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 4);
+  z-index: 3;
+}
+
+.contentVisitUs {
+  max-width: 480px;
+  margin-right: calc(var(--mantine-spacing-xl) * 3);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: 100%;
+    margin-right: 0;
+  }
+}
+
+.titleVisitUs {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-family: Outfit, var(--mantine-font-family);
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: 28px;
+  }
+}
+
+.controlVisitUs {
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex: 1;
+  }
+}
+
+.imageVisitUs {
+  width: 376px;
+  height: 386px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    /* display: none; */
+  }
+}
+
+.highlightVisitUs {
+  position: relative;
+  background-color: var(--mantine-color-blue-light);
+  border-radius: var(--mantine-radius-sm);
+  padding: 4px 12px;
+}
+
+.waveTop,
+.waveBottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.waveTop {
+  top: 0;
+  transform: translateY(-1px);
+}
+
+.waveBottom {
+  bottom: 0;
+  transform: translateY(1px);
+}
+
+.waveSection {
+  position: relative;
+  background-color: #edf2ff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  z-index: 2;
+}
