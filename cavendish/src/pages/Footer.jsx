@@ -5,6 +5,8 @@ import {
 } from "@tabler/icons-react";
 import { ActionIcon, Anchor, Group, Image } from "@mantine/core";
 import pcmLogo from "../assets/pcm.png";
+// import cuzlogo from "../assets/cuzlogo.png";
+import cuzlogo from "../assets/cavendish.png"
 import classes from "../Style.module.css";
 
 const links = [
@@ -29,8 +31,16 @@ export function Footer() {
   return (
     <div className={classes.footer}>
       <div className={classes.innerFooter}>
-        <Image src={pcmLogo} alt="logo" className={classes.logo} />
-
+        <Group gap="xs" justify="" align="center" wrap="nowrap">
+          <Anchor href="#">
+            <Image src={pcmLogo} alt="logo" className={classes.logo} />
+          </Anchor>
+          <Anchor href="https://www.cavendishza.org/" target="_blank" rel='noreferrer noopener'>
+            {/* TODO: compare the altenative cavendish univerty logo */}
+            {/* <Image src={cuzlogo} alt="Cavendish university logo"  className={classes.logo}/> */}
+            <Image src={cuzlogo} alt="logo" className={classes.logo} style={{width: '34px', height: 'auto'}} />
+          </Anchor>
+        </Group>
         <Group className={classes.linksFooter}>{items}</Group>
 
         <Group gap="xs" justify="flex-end" wrap="nowrap">
