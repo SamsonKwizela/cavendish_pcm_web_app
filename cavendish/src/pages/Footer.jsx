@@ -32,14 +32,14 @@ export function Footer() {
     <div className={classes.footer}>
       <div className={classes.innerFooter}>
         <Group gap="xs" justify="" align="center" wrap="nowrap">
-          <a href="#">
+          <Anchor href="#">
             <Image src={pcmLogo} alt="logo" className={classes.logo} />
-          </a>
-          <a href="https://www.cavendishza.org/" target="_blank" rel='noreferrer noopener'>
+          </Anchor>
+          <Anchor href="https://www.cavendishza.org/" target="_blank" rel='noreferrer noopener'>
             {/* TODO: compare the altenative cavendish univerty logo */}
             {/* <Image src={cuzlogo} alt="Cavendish university logo"  className={classes.logo}/> */}
             <Image src={cuzlogo} alt="logo" className={classes.logo} style={{width: '34px', height: 'auto'}} />
-          </a>
+          </Anchor>
         </Group>
         <Group className={classes.linksFooter}>{items}</Group>
 
