@@ -40,19 +40,7 @@ The PCM Web App is designed to:
 
 ## 📁 Project Structure
 
-/cavendish-pcm-web-app
-├── /src
-│ ├── /components # Reusable UI components
-│ ├── /pages # App pages/routes
-│ ├── /routes # Route definitions
-│ ├── /context # Global state management
-│ ├── /hooks # Custom React hooks
-│ ├── /assets # Images, icons, styles
-│ ├── App.js # Main App component
-│ └── index.js # Entry point
-├── package.json
-├── .gitignore
-├── README.md
+cavendish-pcm-web-app ├── src │   ├── components   # Reusable UI components │   ├── pages        # App pages/routes │   ├── routes       # Route definitions │   ├── context      # Global state management │   ├── hooks        # Custom React hooks │   ├── assets       # Images, icons, styles │   ├── App.js       # Main App component │   └── index.js     # Entry point ├── package.json ├── .gitignore └── README.md
 
 👥 Roles
 Admin: Create events, manage members, upload documents, view full dashboard.
